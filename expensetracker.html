@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+
+  <!-- LINK CSS FILE -->
+  <link rel="stylesheet" href="expensetracker.css">
+</head>
+<body>
+
+<!-- MAIN BOX -->
+<div class="container">
+
+  <h2>Expense Tracker</h2>
+
+  <!-- DASHBOARD SECTION -->
+  <div class="dashboard">
+    <div class="card">
+      <h4>Balance</h4>
+      <p>₹<span id="balance">0</span></p>
+    </div>
+
+    <div class="card income">
+      <h4>Income</h4>
+      <p>₹<span id="income">0</span></p>
+    </div>
+
+    <div class="card expense">
+      <h4>Expense</h4>
+      <p>₹<span id="expense">0</span></p>
+    </div>
+
+    <div class="card">
+      <h4>Transactions</h4>
+      <p><span id="count">0</span></p>
+    </div>
+  </div>
+
+  <!-- MONTH FILTER -->
+  <select id="monthFilter">
+    <option value="all">All Months</option>
+    <option value="0">January</option>
+    <option value="1">February</option>
+    <option value="2">March</option>
+    <option value="3">April</option>
+    <option value="4">May</option>
+    <option value="5">June</option>
+    <option value="6">July</option>
+    <option value="7">August</option>
+    <option value="8">September</option>
+    <option value="9">October</option>
+    <option value="10">November</option>
+    <option value="11">December</option>
+  </select>
+
+  <select id="currency">
+  <option value="₹">₹ INR</option>
+  <option value="$">$ USD</option>
+  <option value="€">€ EUR</option>
+</select>
+
+  <!-- TRANSACTION FORM -->
+  <form id="transaction-form">
+  <select id="category">
+  <option value="Food">Food</option>
+  <option value="Travel">Travel</option>
+  <option value="Shopping">Shopping</option>
+  <option value="Bills">Bills</option>
+  </select>
+  
+<input type="date" id="date" class="field">
+<input type="text" id="text" class="field" placeholder="Description" required>
+<input type="number" id="amount" class="field" placeholder="Amount (+income / -expense)" required>
+
+    <button>Add Transaction</button>
+  </form>
+  <button id="clearAll">Clear All</button>
+
+  <input type="text" id="search" placeholder="Search transactions">
+
+  <!-- <button class="delete-btn" onclick="removeTransaction(${transaction.id})">
+  Delete
+</button> -->
+
+
+  <!-- TRANSACTION LIST -->
+  <ul id="transactions"></ul>
+
+  <!-- CHART -->
+  <canvas id="myChart"></canvas>
+
+</div>
+
+<!-- CHART JS LIBRARY (ADD BEFORE script.js) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- LINK JS FILE -->
+<script src="expensetracker.js"></script>
+
+</body>
+</html>  

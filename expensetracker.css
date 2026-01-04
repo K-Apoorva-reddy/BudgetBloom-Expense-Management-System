@@ -1,0 +1,212 @@
+/* ======================
+   GLOBAL STYLES
+====================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #a2b9e5;
+  font-family: Arial, sans-serif;
+}
+
+/* ======================
+   MAIN CONTAINER
+====================== */
+
+.container {
+  width: 40%;
+  max-width: 850px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+/* ======================
+   DASHBOARD
+====================== */
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.card h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.card p {
+  margin-top: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.income {
+  border-left: 5px solid #22c55e;
+}
+
+.expense {
+  border-left: 5px solid #ef4444;
+}
+
+/* ======================
+   FORM & INPUTS
+====================== */
+
+select,
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* ======================
+   BUTTONS
+====================== */
+
+form button {
+  background: #a9a5ea;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #4338ca;
+}
+
+#clearAll {
+  background: #ef4444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+#clearAll:hover {
+  background: #dc2626;
+}
+
+/* ======================
+   SEARCH
+====================== */
+
+#search {
+  margin-top: 12px;
+}
+
+/* ======================
+   HISTORY / EXPENSE TITLES
+====================== */
+
+.history-title {
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #627ca7;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 4px;
+}
+
+/* ======================
+   TRANSACTION LISTS
+====================== */
+
+#transactions,
+#expense-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#transactions li,
+#expense-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  background: #94dce3;
+  font-size: 14px;
+}
+
+/* ======================
+   AMOUNT COLORS
+====================== */
+
+.income-item span:nth-child(2) {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.expense-item span:nth-child(2) {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+/* ======================
+   DELETE BUTTON
+====================== */
+
+.delete-btn {
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 6px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* ======================
+   PIE CHART
+====================== */
+
+#myChart {
+  width: 150px !important;
+  height: 180px !important;
+  display: block;
+  margin: 20px auto 0;
+}
